@@ -1,6 +1,0 @@
-version: 1
-services:
-  - type: web
-    name: monitoreomonos
-    env: docker
-    dockerComposePath: ./docker-compose.yml

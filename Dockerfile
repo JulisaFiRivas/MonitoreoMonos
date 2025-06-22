@@ -1,3 +1,3 @@
 # Dockerfile
-FROM scratch
-CMD ["echo", "Using docker-compose.yml — no CMD needed"]
+FROM prom/prometheus:latest
+COPY prometheus.yml /etc/prometheus/prometheus.yml
