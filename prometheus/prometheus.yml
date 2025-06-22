@@ -5,13 +5,14 @@ scrape_configs:
   - job_name: 'blackbox-monitoring'
     metrics_path: /probe
     params:
-      module: [http_2xx]  # Módulo predefinido
+      module: [http_2xx]
     static_configs:
       - targets:
-          - http://pacheco.chillan.ubiobio.cl:81
+          - http://pacheco.chillan.ubiobio.cl:81/inicio
+    relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: blackbox-exporter:9115  # Nombre del servicio Docker
+        replacement: blackbox-exporter:9115

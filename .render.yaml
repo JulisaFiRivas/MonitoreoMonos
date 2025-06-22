@@ -1,7 +1,6 @@
 version: 1
 services:
   - type: web
-    name: monitoring-pacheco
+    name: monitoreomonos
     env: docker
-    dockerfilePath: ./Dockerfile  # Esto es solo un "placeholder"
     dockerComposePath: ./docker-compose.yml

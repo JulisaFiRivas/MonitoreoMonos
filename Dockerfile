@@ -1,2 +1,3 @@
-# Este es un Dockerfile vacío necesario para que Render no falle
+# Dockerfile
 FROM scratch
+CMD ["echo", "Using docker-compose.yml — no CMD needed"]
