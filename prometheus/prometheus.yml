@@ -8,8 +8,7 @@ scrape_configs:
       module: [http_2xx]  # Módulo predefinido
     static_configs:
       - targets:
-          - http://pacheco.chillan.ubiobio.cl:81/inicio
-    relabel_configs:
+          - http://pacheco.chillan.ubiobio.cl:81
       - source_labels: [__address__]
         target_label: __param_target
       - source_labels: [__param_target]
